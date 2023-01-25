@@ -1,0 +1,43 @@
+[2023-01-25T16:40:54.037] [ERROR] default - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at D:\Back-End\18\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:641:28)
+    at SMTPConnection.emit (node:events:527:28)
+    at SMTPConnection._actionEHLO (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:1331:14)
+    at SMTPConnection._processResponse (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
+[2023-01-25T16:57:51.848] [ERROR] default - error de logeo
+[2023-01-25T16:58:12.030] [ERROR] default - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at D:\Back-End\18\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:641:28)
+    at SMTPConnection.emit (node:events:527:28)
+    at SMTPConnection._actionEHLO (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:1331:14)
+    at SMTPConnection._processResponse (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
+[2023-01-25T17:01:02.291] [ERROR] default - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at D:\Back-End\18\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:641:28)
+    at SMTPConnection.emit (node:events:527:28)
+    at SMTPConnection._actionEHLO (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:1331:14)
+    at SMTPConnection._processResponse (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
