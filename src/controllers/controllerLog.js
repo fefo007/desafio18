@@ -1,7 +1,7 @@
 const passport = require('passport');
 const info = require('../service/info')
 const logger = require('../loggers/loggersLog4js')
-const getUser = require('../service/serviceLog')
+// const getUser = require('../service/serviceLog')
 const { Strategy: LocalStrategy } = require('passport-local');
 const {passportRegisterConfig,
     passportLoginConfig,
@@ -41,15 +41,15 @@ const getRegisterError = async (req,res)=>{0
     res.render('registerError')
 }
 
-const getUserHome = async (req,res)=>{
+const getUserHome =async (req,res)=>{
     // let user = await usuarios.find(usuario => usuario.username == req.user.username)
-    const user =await getUser(req.user.username)
+    const user =await mongoDbUserContainer.getUser(req.uer.username)
     res.render('userHome',{user})
 }
 
 const getUserInfo = async (req,res)=>{
     // let user = await usuarios.find(usuario => usuario.username == req.user.username)
-    const user =await getUser(req.user.username)
+    const user =mongoDbUserContainer.getUser(req.user.username)
     res.render('userInfo',{user})
 }
 

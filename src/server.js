@@ -4,12 +4,11 @@ const routerCart=require('./routes/routesCart')
 const routerProd = require('./routes/routesProducts')
 const {engine} = require('express-handlebars')
 const logger = require('./loggers/loggersLog4js')
-
+const path = require('path')
 // USADO YARGS EN EL PUERTO
 // const yargs = require('yargs/yargs')(process.argv.slice(2))
 // USANDO MINIMIST EN EL PUERTO
 const parseArgs = require('minimist')
-
 
 const app = express()
 
@@ -20,7 +19,7 @@ app.use('/productos',routerProd)
 
 app.engine("handlebars",engine())
 app.set("view engine","handlebars")
-app.set("views","src/views")
+app.set("views",path.join(__dirname,'views'))
 
 app.get('/',(req,res)=>{
     res.redirect('/user/login')

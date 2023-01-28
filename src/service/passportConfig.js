@@ -1,15 +1,18 @@
 const sendMail=require('../sendNotifications/sendEmail')
 const {newUserEmail}=require('../sendNotifications/emailTemplates')
 const bCrypt = require('bcrypt')
-const {getUser,saveUser} = require('./serviceLog')
+// const {getUser,saveUser} = require('./serviceLog')
+const MongoDbUserContainer = require('../daos/MongoDbUserContainer')
+const userSchema = require('../daos/mongoSchemas/mongoSchemas')
+const mongoDbUserContainer = new MongoDbUserContainer('usuarios',userSchema)
 // const usuarios=[]
 
 const passportRegisterConfig=(req, username, password, done) => {
-
-    const { direccion,residencia,edad,celular,formfile } = req.body
+    console.log(username)
+    const { direccion,residencia,edad,celular,imagen } = req.body
     // const usuario = usuarios.find(usuario => usuario.username == username)
     // BASE DE DATOS--------- 
-    const usuario = getUser(username)
+    const usuario = mongoDbUserContainer.getUser(username)
 
     if (usuario) {
     return done('usuario ya existente')
@@ -22,14 +25,15 @@ const passportRegisterConfig=(req, username, password, done) => {
         residencia:residencia,
         edad:edad,
         celular:celular,
-        formfile:formfile,
+        imagen:imagen
     }
+    console.log(user)
     // usuarios.push(user)
     const newuser=newUserEmail(user)
     sendMail('nuevo usuario',newuser)
     // BASE DE DATOS--------- 
     // 
-    saveUser(user)
+    mongoDbUserContainer.saveUser(user)
     return done(null, user)
 }
 
@@ -41,7 +45,7 @@ const passportLoginConfig=(username, password, done) => {
 
     // const user = usuarios.find(usuario => usuario.username == username)
     // BASE DE DATOS--------- 
-    const user = getUser(username)
+    const user = mongoDbUserContainer.getUser(username)
     if (!user) {
         return done(null, false)
     }
@@ -62,7 +66,7 @@ const passportSerializerConfig=function (user, done) {
 const passportDesserializerConfig=function (username, done) {
     // const usuario = usuarios.find(usuario => usuario.username == username)
     // BASE DE DATOS--------- 
-    const usuario = getUser(username)
+    const usuario = mongoDbUserContainer.getUser(username)
     done(null, usuario);
 }
 

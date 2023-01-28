@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema(
     {
-        username:{type:String,required:true},
+        username:{type:String,required:true,unique:true,dropDups: true},
         password:{type:String,required:true},
-        direccion:{type:String,required:true},
+        direccion:{type:String,required:true,unique:true,dropDups: true},
         residencia:{type:String,required:true},
         edad:{type:Number,required:true},
         celular:{type:Number,required:true},
-        formfile:{type:String,required:true},
+        imagen:{type:String,required:true}
     }
 )
 

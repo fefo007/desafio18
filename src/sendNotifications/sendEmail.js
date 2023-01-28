@@ -6,8 +6,10 @@ const emailConfig = {
     service:"gmail",
     port:587,
     auth:{
-        user:config.GMAIL_ACCOUNT,
-        pass:config.GMAIL_PASS
+        // user:config.GMAIL_ACCOUNT,
+        // pass:config.GMAIL_PASS
+        user:'FedeFracaro007@gmail.com',
+        pass:'woylbedcptwinoze'
     }
 }
 

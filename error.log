@@ -41,3 +41,46 @@
   code: 'EAUTH',
   command: 'API'
 }
+[2023-01-25T17:21:11.896] [ERROR] default - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at D:\Back-End\18\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:641:28)
+    at SMTPConnection.emit (node:events:527:28)
+    at SMTPConnection._actionEHLO (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:1331:14)
+    at SMTPConnection._processResponse (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
+[2023-01-27T18:01:30.823] [ERROR] default - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at D:\Back-End\18\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:641:28)
+    at SMTPConnection.emit (node:events:527:28)
+    at SMTPConnection._actionEHLO (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:1331:14)
+    at SMTPConnection._processResponse (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
+[2023-01-28T18:44:53.522] [ERROR] default - error de logeo
+[2023-01-28T20:09:37.265] [ERROR] default - Error: No recipients defined
+    at SMTPConnection._formatError (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._setEnvelope (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:1007:34)
+    at SMTPConnection.send (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:621:14)
+    at sendMessage (D:\Back-End\18\node_modules\nodemailer\lib\smtp-transport\index.js:228:28)
+    at D:\Back-End\18\node_modules\nodemailer\lib\smtp-transport\index.js:286:25
+    at SMTPConnection._actionAUTHComplete (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:1562:9)
+    at SMTPConnection.<anonymous> (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (D:\Back-End\18\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EENVELOPE',
+  command: 'API'
+}
