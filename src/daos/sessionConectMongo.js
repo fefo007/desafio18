@@ -1,10 +1,10 @@
-const MongoStore = require('connect-mongo')
+const mongoStore = require('connect-mongo')
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 const config=require('../config')
 
 
 const sessionConfig={
-    store: MongoStore.create({
+    store: mongoStore.create({
         mongoUrl:config.MONGO_STORE,
         mongoOptions: advancedOptions
     }),
